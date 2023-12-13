@@ -1,2 +1,12 @@
 **/.vs
 **/packages
+/nanoFrameworkDemo/nanoFrameworkDemo/bin/Debug/nanoFrameworkDemo.bin
+/nanoFrameworkDemo/nanoFrameworkDemo/bin/Debug/nanoFrameworkDemo.exe
+/nanoFrameworkDemo/nanoFrameworkDemo/bin/Debug/nanoFrameworkDemo.pdb
+/nanoFrameworkDemo/nanoFrameworkDemo/bin/Debug/nanoFrameworkDemo.pe
+/nanoFrameworkDemo/nanoFrameworkDemo/obj/Debug/nanoFrameworkDemo.exe
+/nanoFrameworkDemo/nanoFrameworkDemo/obj/Debug/nanoFrameworkDemo.nfproj.AssemblyReference.cache
+/nanoFrameworkDemo/nanoFrameworkDemo/obj/Debug/nanoFrameworkDemo.nfproj.CoreCompileInputs.cache
+/nanoFrameworkDemo/nanoFrameworkDemo/obj/Debug/nanoFrameworkDemo.nfproj.FileListAbsolute.txt
+/nanoFrameworkDemo/nanoFrameworkDemo/obj/Debug/nanoFrameworkDemo.pdb
+/nanoFrameworkDemo/nanoFrameworkDemo/obj/Debug/nanoFrameworkDemo.pe

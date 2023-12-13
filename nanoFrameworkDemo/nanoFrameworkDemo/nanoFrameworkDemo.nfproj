@@ -120,6 +120,7 @@
     <None Include="bin\Debug\System.Threading.dll" />
     <None Include="bin\Debug\System.Threading.pdbx" />
     <None Include="bin\Debug\System.Threading.pe" />
+    <None Include=".gitignore" />
     <None Include="obj\Debug\mscorlib.dll" />
     <None Include="obj\Debug\nanoFramework.DependencyInjection.dll" />
     <None Include="obj\Debug\nanoFramework.Hosting.dll" />
