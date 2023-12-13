@@ -1,0 +1,309 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>nanoFramework.Hosting</name>
+    </assembly>
+    <members>
+        <member name="T:nanoFramework.Hosting.SchedulerService">
+            <summary>
+            Base class timer service which calls an asynchronous action after the configured interval.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hosting.SchedulerService.#ctor(System.TimeSpan)">
+            <summary>
+            Schedules the immediate execution of <see cref="M:nanoFramework.Hosting.SchedulerService.ExecuteAsync"/> on the provided interval.
+            </summary>
+            <param name="interval">The <see cref="T:System.TimeSpan"/> interval scheduler will execute on.</param>
+        </member>
+        <member name="M:nanoFramework.Hosting.SchedulerService.#ctor(System.Int32,System.Int32,System.TimeSpan)">
+            <summary>
+            Schedules the execution of <see cref="M:nanoFramework.Hosting.SchedulerService.ExecuteAsync"/> on the provided interval.
+            </summary>
+            <param name="hour">The hour the scheduler will start on.</param>
+            <param name="min">The miniute the scheduler will start on.</param>
+            <param name="interval">The <see cref="T:System.TimeSpan"/> interval scheduler will execute on.</param>
+        </member>
+        <member name="P:nanoFramework.Hosting.SchedulerService.Time">
+            <summary>
+            Gets the due time of the timer. 
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hosting.SchedulerService.Interval">
+            <summary>
+            Gets the interval of the timer.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hosting.SchedulerService.ExecuteTimer">
+            <summary>
+            Gets the <see cref="T:System.Threading.Timer"/> that executes the background operation.
+            </summary>
+            <remarks>
+            Will return <see langword="null"/> if the background operation hasn't started.
+            </remarks>
+        </member>
+        <member name="M:nanoFramework.Hosting.SchedulerService.ExecuteAsync">
+            <summary>
+            This method is called each time the timer elapses. 
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hosting.SchedulerService.Start">
+            <inheritdoc />
+        </member>
+        <member name="M:nanoFramework.Hosting.SchedulerService.Stop">
+            <inheritdoc />
+        </member>
+        <member name="M:nanoFramework.Hosting.SchedulerService.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="T:nanoFramework.Hosting.BackgroundService">
+            <summary>
+            Base class for implementing a long running <see cref="T:nanoFramework.Hosting.IHostedService"/>.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hosting.BackgroundService.ShutdownTimeout">
+            <summary>
+            Gets or sets the amount of time to wait for the <see cref="M:nanoFramework.Hosting.BackgroundService.ExecuteThread"/> to terminate.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hosting.BackgroundService.CancellationRequested">
+            <summary>
+            Gets or sets whether cancellation has been requested for this service.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hosting.BackgroundService.ExecuteThread">
+            <summary>
+            Gets the <see cref="T:System.Threading.Thread"/> that executes the background operation.
+            </summary>
+            <remarks>
+            Will return <see langword="null"/> if the background operation hasn't started.
+            </remarks>
+        </member>
+        <member name="M:nanoFramework.Hosting.BackgroundService.ExecuteAsync">
+            <summary>
+            This method is called when the <see cref="T:nanoFramework.Hosting.IHostedService"/> starts.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hosting.BackgroundService.Start">
+            <inheritdoc />
+        </member>
+        <member name="M:nanoFramework.Hosting.BackgroundService.Stop">
+            <inheritdoc />
+        </member>
+        <member name="M:nanoFramework.Hosting.BackgroundService.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="T:nanoFramework.Hosting.Host">
+            <summary>
+            Provides convenience methods for creating instances of <see cref="T:nanoFramework.Hosting.IHostBuilder"/> with pre-configured defaults.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hosting.Host.CreateDefaultBuilder">
+            <summary>
+            Initializes a new instance of the <see cref="T:nanoFramework.Hosting.HostBuilder"/> class with pre-configured defaults.
+            </summary>
+            <returns>The initialized <see cref="T:nanoFramework.Hosting.IHostBuilder"/>.</returns>
+        </member>
+        <member name="T:nanoFramework.Hosting.HostBuilder">
+            <summary>
+            Default implementation of <see cref="T:nanoFramework.Hosting.IHostBuilder"/>.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hosting.HostBuilder.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:nanoFramework.Hosting.HostBuilder"/>.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hosting.HostBuilder.Properties">
+            <inheritdoc />
+        </member>
+        <member name="M:nanoFramework.Hosting.HostBuilder.ConfigureServices(nanoFramework.Hosting.ServiceContextDelegate)">
+            <inheritdoc />
+        </member>
+        <member name="M:nanoFramework.Hosting.HostBuilder.UseDefaultServiceProvider(nanoFramework.Hosting.ProviderContextDelegate)">
+            <inheritdoc />
+        </member>
+        <member name="M:nanoFramework.Hosting.HostBuilder.Build">
+            <inheritdoc />
+        </member>
+        <member name="T:nanoFramework.Hosting.HostBuilderContext">
+            <summary>
+            Context containing the common services on the <see cref="T:nanoFramework.Hosting.IHost" />. Some properties may be null until set by the <see cref="T:nanoFramework.Hosting.IHost" />.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hosting.HostBuilderContext.#ctor(System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:nanoFramework.Hosting.HostBuilderContext"/> class.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hosting.HostBuilderContext.Properties">
+            <summary>
+            A central location for sharing state between components during the host building process.
+            </summary>
+        </member>
+        <member name="T:nanoFramework.Hosting.HostingAbstractionsHostExtensions">
+            <summary>
+            Extensions for <see cref="T:nanoFramework.Hosting.IHost"/>.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hosting.HostingAbstractionsHostExtensions.Run(nanoFramework.Hosting.IHost)">
+            <summary>
+            Runs an application and block the calling thread.
+            </summary>
+            <param name="host">The <see cref="T:nanoFramework.Hosting.IHost"/> to run.</param>
+        </member>
+        <member name="T:nanoFramework.Hosting.HostingHostBuilderExtensions">
+            <summary>
+            Extensions for <see cref="T:nanoFramework.Hosting.IHostBuilder"/>.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hosting.HostingHostBuilderExtensions.ConfigureServices(nanoFramework.Hosting.IHostBuilder,nanoFramework.Hosting.ServiceAction)">
+            <summary>
+            Adds services to the container. This can be called multiple times and the results will be additive.
+            </summary>
+            <param name="hostBuilder">The <see cref="T:nanoFramework.Hosting.IHostBuilder" /> to configure.</param>
+            <param name="configureDelegate">The delegate for configuring the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.</param>
+            <returns>The same instance of the <see cref="T:nanoFramework.Hosting.IHostBuilder"/> for chaining.</returns>
+        </member>
+        <member name="M:nanoFramework.Hosting.HostingHostBuilderExtensions.UseDefaultServiceProvider(nanoFramework.Hosting.IHostBuilder,nanoFramework.Hosting.ProviderAction)">
+            <summary>
+            Specify the <see cref="T:System.IServiceProvider"/> to be the default one.
+            </summary>
+            <param name="hostBuilder">The <see cref="T:nanoFramework.Hosting.IHostBuilder"/> to configure.</param>
+            <param name="configureDelegate">The delegate for configuring the <see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProviderOptions"/>.</param>
+            <returns>The same instance of the <see cref="T:nanoFramework.Hosting.IHostBuilder"/> for chaining.</returns>
+        </member>
+        <member name="T:nanoFramework.Hosting.IHost">
+            <summary>
+            A program abstraction.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hosting.IHost.Services">
+            <summary>
+            The programs configured services.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hosting.IHost.Start">
+            <summary>
+            Start the program.
+            </summary>
+            <exception cref="T:System.AggregateException">One or more hosted services failed to start.</exception>
+        </member>
+        <member name="M:nanoFramework.Hosting.IHost.Stop">
+            <summary>
+            Attempts to gracefully stop the program.
+            </summary>
+            <exception cref="T:System.AggregateException">One or more hosted services failed to stop.</exception>
+        </member>
+        <member name="T:nanoFramework.Hosting.IHostBuilder">
+            <summary>
+            A program initialization abstraction.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hosting.IHostBuilder.Properties">
+            <summary>
+            A central location for sharing state between components during the host building process.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hosting.IHostBuilder.ConfigureServices(nanoFramework.Hosting.ServiceContextDelegate)">
+            <summary>
+            Adds services to the container. This can be called multiple times and the results will be additive.
+            </summary>
+            <param name="configureDelegate">The delegate for configuring the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> that will be used
+            to construct the <see cref="T:System.IServiceProvider"/>.</param>
+            <returns>The same instance of the <see cref="T:nanoFramework.Hosting.IHostBuilder"/> for chaining.</returns>
+        </member>
+        <member name="M:nanoFramework.Hosting.IHostBuilder.UseDefaultServiceProvider(nanoFramework.Hosting.ProviderContextDelegate)">
+            <summary>
+            Specify the <see cref="T:System.IServiceProvider"/> to be the default one.
+            </summary>
+            <param name="configureDelegate">The delegate for configuring the <see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProviderOptions"/> that will be used
+            to construct the <see cref="T:System.IServiceProvider"/>.</param>
+            <returns>The same instance of the <see cref="T:nanoFramework.Hosting.IHostBuilder"/> for chaining.</returns>
+        </member>
+        <member name="M:nanoFramework.Hosting.IHostBuilder.Build">
+            <summary>
+            Run the given actions to initialize the host. This can only be called once.
+            </summary>
+            <returns>An initialized <see cref="T:nanoFramework.Hosting.IHost"/>.</returns>
+            <exception cref="T:System.InvalidOperationException">"Build can only be called once."</exception>
+        </member>
+        <member name="T:nanoFramework.Hosting.IHostedService">
+            <summary>
+            Defines methods for objects that are managed by the host.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hosting.IHostedService.Start">
+            <summary>
+            Triggered when the application host is ready to start the service.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hosting.IHostedService.Stop">
+            <summary>
+            Triggered when the application host is performing a graceful shutdown.
+            </summary>
+        </member>
+        <member name="T:nanoFramework.Hosting.Internal.Host">
+            <summary>
+            Default implementation of <see cref="T:nanoFramework.Hosting.IHost"/>.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hosting.Internal.Host.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of <see cref="T:nanoFramework.Hosting.Internal.Host"/>.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hosting.Internal.Host.Services">
+            <inheritdoc />
+        </member>
+        <member name="M:nanoFramework.Hosting.Internal.Host.Start">
+            <inheritdoc />
+        </member>
+        <member name="M:nanoFramework.Hosting.Internal.Host.Stop">
+            <inheritdoc />
+        </member>
+        <member name="M:nanoFramework.Hosting.Internal.Host.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="T:nanoFramework.Hosting.ProviderAction">
+            <summary>
+            Represents a function that can process a provider.
+            </summary>
+            <param name="configure">The delegate that configures the <see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProviderOptions"/>.</param>
+        </member>
+        <member name="T:nanoFramework.Hosting.ServiceCollectionHostedServiceExtensions">
+            <summary>
+            Extensions for <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hosting.ServiceCollectionHostedServiceExtensions.AddHostedService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)">
+            <summary>
+            Add an <see cref="T:nanoFramework.Hosting.IHostedService"/> registration for the given type.
+            </summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> to register with.</param>
+            <param name="implementationType">The implementation type of the service.</param>
+            <returns>The original <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="services"/> or <paramref name="implementationType"/> can't be null</exception>
+            <exception cref="T:System.ArgumentException">Implementation type must inherit <see cref="T:nanoFramework.Hosting.IHostedService"/> interface.</exception>
+        </member>
+        <member name="T:nanoFramework.Hosting.ServiceAction">
+            <summary>
+            Represents a function that can process a service.
+            </summary>
+            <param name="serviceCollection">Specifies the contract for a collection of service descriptors.</param>
+        </member>
+        <member name="T:nanoFramework.Hosting.ProviderContextDelegate">
+            <summary>
+            Represents a function that can process a provider.
+            </summary>
+            <param name="context">The context for the request.</param>
+            <param name="configure">The delegate that configures the <see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProviderOptions"/>.</param>
+        </member>
+        <member name="T:nanoFramework.Hosting.ServiceContextDelegate">
+            <summary>
+            Represents a function that can process a service.
+            </summary>
+            <param name="context">The context for the host builder.</param>
+            <param name="serviceCollection">Specifies the contract for a collection of service descriptors.</param>
+        </member>
+    </members>
+</doc>
