@@ -20,7 +20,6 @@
   <ItemGroup>
     <Compile Include="Abstractions\IWifiService.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="obj\Debug\.NETnanoFramework,Version=v1.0.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Abstractions\IHardwareService.cs" />
@@ -73,107 +72,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\mscorlib.dll" />
-    <None Include="bin\Debug\mscorlib.pdbx" />
-    <None Include="bin\Debug\mscorlib.pe" />
-    <None Include="bin\Debug\nanoFramework.DependencyInjection.dll" />
-    <None Include="bin\Debug\nanoFramework.DependencyInjection.pdbx" />
-    <None Include="bin\Debug\nanoFramework.DependencyInjection.pe" />
-    <None Include="bin\Debug\nanoFramework.Hosting.dll" />
-    <None Include="bin\Debug\nanoFramework.Hosting.pdbx" />
-    <None Include="bin\Debug\nanoFramework.Hosting.pe" />
-    <None Include="bin\Debug\nanoFramework.Runtime.Events.dll" />
-    <None Include="bin\Debug\nanoFramework.Runtime.Events.pdbx" />
-    <None Include="bin\Debug\nanoFramework.Runtime.Events.pe" />
-    <None Include="bin\Debug\nanoFramework.System.Collections.dll" />
-    <None Include="bin\Debug\nanoFramework.System.Collections.pdbx" />
-    <None Include="bin\Debug\nanoFramework.System.Collections.pe" />
-    <None Include="bin\Debug\nanoFramework.System.Runtime.dll" />
-    <None Include="bin\Debug\nanoFramework.System.Runtime.pdbx" />
-    <None Include="bin\Debug\nanoFramework.System.Runtime.pe" />
-    <None Include="bin\Debug\nanoFramework.System.Text.dll" />
-    <None Include="bin\Debug\nanoFramework.System.Text.pdbx" />
-    <None Include="bin\Debug\nanoFramework.System.Text.pe" />
-    <None Include="bin\Debug\nanoFramework.WebServer.dll" />
-    <None Include="bin\Debug\nanoFramework.WebServer.pdbx" />
-    <None Include="bin\Debug\nanoFramework.WebServer.pe" />
-    <None Include="bin\Debug\nanoFrameworkDemo.bin" />
-    <None Include="bin\Debug\nanoFrameworkDemo.exe" />
-    <None Include="bin\Debug\nanoFrameworkDemo.pdb" />
-    <None Include="bin\Debug\nanoFrameworkDemo.pdbx" />
-    <None Include="bin\Debug\nanoFrameworkDemo.pe" />
-    <None Include="bin\Debug\System.Device.Gpio.dll" />
-    <None Include="bin\Debug\System.Device.Gpio.pdbx" />
-    <None Include="bin\Debug\System.Device.Gpio.pe" />
-    <None Include="bin\Debug\System.Device.Wifi.dll" />
-    <None Include="bin\Debug\System.Device.Wifi.pdbx" />
-    <None Include="bin\Debug\System.Device.Wifi.pe" />
-    <None Include="bin\Debug\System.IO.Streams.dll" />
-    <None Include="bin\Debug\System.IO.Streams.pdbx" />
-    <None Include="bin\Debug\System.IO.Streams.pe" />
-    <None Include="bin\Debug\System.Net.dll" />
-    <None Include="bin\Debug\System.Net.Http.dll" />
-    <None Include="bin\Debug\System.Net.Http.pdbx" />
-    <None Include="bin\Debug\System.Net.Http.pe" />
-    <None Include="bin\Debug\System.Net.pdbx" />
-    <None Include="bin\Debug\System.Net.pe" />
-    <None Include="bin\Debug\System.Threading.dll" />
-    <None Include="bin\Debug\System.Threading.pdbx" />
-    <None Include="bin\Debug\System.Threading.pe" />
     <None Include=".gitignore" />
-    <None Include="obj\Debug\mscorlib.dll" />
-    <None Include="obj\Debug\nanoFramework.DependencyInjection.dll" />
-    <None Include="obj\Debug\nanoFramework.Hosting.dll" />
-    <None Include="obj\Debug\nanoFramework.Runtime.Events.dll" />
-    <None Include="obj\Debug\nanoFramework.System.Collections.dll" />
-    <None Include="obj\Debug\nanoFramework.System.Runtime.dll" />
-    <None Include="obj\Debug\nanoFramework.System.Text.dll" />
-    <None Include="obj\Debug\nanoFramework.WebServer.dll" />
-    <None Include="obj\Debug\nanoFrameworkDemo.exe" />
-    <None Include="obj\Debug\nanoFrameworkDemo.nfproj.AssemblyReference.cache" />
-    <None Include="obj\Debug\nanoFrameworkDemo.nfproj.CopyComplete" />
-    <None Include="obj\Debug\nanoFrameworkDemo.nfproj.CoreCompileInputs.cache" />
-    <None Include="obj\Debug\nanoFrameworkDemo.pdb" />
-    <None Include="obj\Debug\nanoFrameworkDemo.pdbx" />
-    <None Include="obj\Debug\nanoFrameworkDemo.pe" />
-    <None Include="obj\Debug\System.Device.Gpio.dll" />
-    <None Include="obj\Debug\System.Device.Wifi.dll" />
-    <None Include="obj\Debug\System.IO.Streams.dll" />
-    <None Include="obj\Debug\System.Net.dll" />
-    <None Include="obj\Debug\System.Net.Http.dll" />
-    <None Include="obj\Debug\System.Threading.dll" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="bin\Debug\mscorlib.xml" />
-    <Content Include="bin\Debug\nanoFramework.DependencyInjection.xml" />
-    <Content Include="bin\Debug\nanoFramework.Hosting.xml" />
-    <Content Include="bin\Debug\nanoFramework.Runtime.Events.xml" />
-    <Content Include="bin\Debug\nanoFramework.System.Collections.xml" />
-    <Content Include="bin\Debug\nanoFramework.System.Runtime.xml" />
-    <Content Include="bin\Debug\nanoFramework.System.Text.xml" />
-    <Content Include="bin\Debug\nanoFramework.WebServer.xml" />
-    <Content Include="bin\Debug\System.Device.Gpio.xml" />
-    <Content Include="bin\Debug\System.Device.Wifi.xml" />
-    <Content Include="bin\Debug\System.IO.Streams.xml" />
-    <Content Include="bin\Debug\System.Net.Http.xml" />
-    <Content Include="bin\Debug\System.Net.xml" />
-    <Content Include="bin\Debug\System.Threading.xml" />
-    <Content Include="obj\Debug\mscorlib.xml" />
-    <Content Include="obj\Debug\nanoFramework.DependencyInjection.xml" />
-    <Content Include="obj\Debug\nanoFramework.Hosting.xml" />
-    <Content Include="obj\Debug\nanoFramework.Runtime.Events.xml" />
-    <Content Include="obj\Debug\nanoFramework.System.Collections.xml" />
-    <Content Include="obj\Debug\nanoFramework.System.Runtime.xml" />
-    <Content Include="obj\Debug\nanoFramework.System.Text.xml" />
-    <Content Include="obj\Debug\nanoFramework.WebServer.xml" />
-    <Content Include="obj\Debug\nanoFrameworkDemo.nfproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\System.Device.Gpio.xml" />
-    <Content Include="obj\Debug\System.Device.Wifi.xml" />
-    <Content Include="obj\Debug\System.IO.Streams.xml" />
-    <Content Include="obj\Debug\System.Net.Http.xml" />
-    <Content Include="obj\Debug\System.Net.xml" />
-    <Content Include="obj\Debug\System.Threading.xml" />
   </ItemGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets')" />
   <ProjectExtensions>
